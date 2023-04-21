@@ -13,11 +13,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
-public class PayService {
+public class PayService implements PayUseCase {
 
     private final VendorPayRequestClient client;
     private final PaymentRepository repository;
 
+    @Override
     @Transactional
     public PayResult pay(long orderId, long userId, long amount) throws
             PaymentAlreadyExistsException,

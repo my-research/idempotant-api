@@ -8,8 +8,6 @@ class TimeBasedIdGeneratorTest {
 
     @Test
     void name() {
-        long gen = TimeBasedIdGenerator.gen();
-
-        System.out.println("gen = " + gen);
+        System.out.println("gen = " + TimeBasedIdGenerator.gen());
     }
 }

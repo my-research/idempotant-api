@@ -13,7 +13,7 @@ public class VendorPayRequestClient {
 
     private static void paymentProcessing() {
         try {
-            Thread.sleep(2000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

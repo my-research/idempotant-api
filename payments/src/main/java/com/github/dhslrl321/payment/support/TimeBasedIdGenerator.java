@@ -8,8 +8,6 @@ import java.util.Random;
 import java.util.stream.IntStream;
 
 public class TimeBasedIdGenerator {
-    private final static Random random = new Random();
-
 
     public static synchronized long gen() {
         return Long.parseLong(String.valueOf(Instant.now().toEpochMilli()) + random());
@@ -17,7 +15,8 @@ public class TimeBasedIdGenerator {
 
     private static int random() {
         StringBuilder builder = new StringBuilder();
-        IntStream.range(0, 5).forEach(i -> builder.append(random.nextInt(9)));
+
+        IntStream.range(0, 5).forEach(i -> builder.append((int) (Math.random() * 9) + 1));
         return Integer.parseInt(builder.toString());
     }
 }
