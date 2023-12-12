@@ -1,5 +1,6 @@
 package com.github.dhslrl321.app.async
 
+import com.github.dhslrl321.app.async.domain.AsyncOperationRepository
 import com.github.dhslrl321.app.fixture.AsyncOperationFixture
 import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test

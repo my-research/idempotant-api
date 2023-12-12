@@ -1,4 +1,4 @@
-package com.github.dhslrl321.app.async
+package com.github.dhslrl321.app.async.domain
 
 import org.springframework.data.repository.CrudRepository
 
