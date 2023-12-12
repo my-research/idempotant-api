@@ -12,7 +12,6 @@ class AsyncProcessingChecker(
     private val statusHandler: CheckStatusHandler,
 ) {
     fun check(id: String): AsyncOperationCheck {
-
         val operation = repository.findById(id)
             .orElseThrow { throw IllegalArgumentException("$id 에 해당하는 AsyncOperation 을 찾을 수 없습니다") }
 
@@ -23,5 +22,8 @@ class AsyncProcessingChecker(
 data class AsyncOperationCheck(
     val id: String,
     val status: String,
+    val resourceLocation: String? = null,
+    val failureReason: String? = null,
     val createdAt: Instant,
+    val updatedAt: Instant,
 )
