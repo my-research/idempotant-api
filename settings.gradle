@@ -1,5 +1,0 @@
-rootProject.name = 'idempotent-api'
-
-include 'payments'
-
-include 'integration-tests'
