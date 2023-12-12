@@ -1,4 +1,4 @@
-package com.github.dhslrl321.app.async
+package com.github.dhslrl321.app.async.acceptor
 
 import com.github.dhslrl321.app.async.domain.AsyncOperation
 import com.github.dhslrl321.app.async.domain.AsyncOperationRepository

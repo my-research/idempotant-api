@@ -1,4 +1,4 @@
-package com.github.dhslrl321.app.async.check
+package com.github.dhslrl321.app.async.checker
 
 import com.github.dhslrl321.app.async.domain.AsyncOperation
 
