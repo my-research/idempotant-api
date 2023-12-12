@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class SystemArchitecturePatternApplication
+class AsyncRequestResponseSampleApplication
 
 fun main(args: Array<String>) {
-	runApplication<SystemArchitecturePatternApplication>(*args)
+	runApplication<AsyncRequestResponseSampleApplication>(*args)
 }
