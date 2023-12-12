@@ -6,6 +6,7 @@ plugins {
 	kotlin("jvm") version "1.9.20"
 	kotlin("plugin.spring") version "1.9.20"
 	kotlin("plugin.jpa") version "1.9.20"
+	`java-test-fixtures`
 }
 
 group = "com.github.dhslrl321"
@@ -25,7 +26,10 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	runtimeOnly("com.h2database:h2")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("io.kotest:kotest-runner-junit5:5.5.5")
+	testImplementation("io.kotest:kotest-assertions-core:5.5.5")
 }
 
 tasks.withType<KotlinCompile> {

@@ -8,7 +8,6 @@ import java.time.Instant
 data class AsyncOperation(
   @Id
   val id: String,
-  val refId: String,
   var status: AsyncOperationStatus = AsyncOperationStatus.REQUESTED,
   val createdAt: Instant,
   var completedAt: Instant,
