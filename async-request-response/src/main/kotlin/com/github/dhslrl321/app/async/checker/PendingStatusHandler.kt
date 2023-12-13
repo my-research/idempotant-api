@@ -7,7 +7,11 @@ import org.springframework.stereotype.Component
 @Component
 class PendingStatusHandler: CheckStatusHandler {
     override fun handle(asyncOperation: AsyncOperation): AsyncOperationCheck {
-        TODO("Not yet implemented")
+        return AsyncOperationCheck(
+            id = asyncOperation.id,
+            status = asyncOperation.status.name,
+            createdAt = asyncOperation.createdAt,
+        )
     }
 
     override fun support(asyncOperation: AsyncOperation): Boolean =

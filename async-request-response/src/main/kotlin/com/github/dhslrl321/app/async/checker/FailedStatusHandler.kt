@@ -5,11 +5,17 @@ import com.github.dhslrl321.app.async.domain.AsyncOperationStatus
 import org.springframework.stereotype.Component
 
 @Component
-class FailedStatusHandler: CheckStatusHandler {
-    override fun handle(asyncOperation: AsyncOperation): AsyncOperationCheck {
-        TODO("Not yet implemented")
-    }
+class FailedStatusHandler : CheckStatusHandler {
+  override fun handle(asyncOperation: AsyncOperation): AsyncOperationCheck {
+    return AsyncOperationCheck(
+      id = asyncOperation.id,
+      status = asyncOperation.status.name,
+      failureReason = asyncOperation.failureReason,
+      createdAt = asyncOperation.createdAt,
+      updatedAt = asyncOperation.updatedAt,
+    )
+  }
 
-    override fun support(asyncOperation: AsyncOperation): Boolean =
-        asyncOperation.status == AsyncOperationStatus.FAILED
+  override fun support(asyncOperation: AsyncOperation): Boolean =
+    asyncOperation.status == AsyncOperationStatus.FAILED
 }

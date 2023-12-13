@@ -25,5 +25,5 @@ data class AsyncOperationCheck(
     val resourceLocation: String? = null,
     val failureReason: String? = null,
     val createdAt: Instant,
-    val updatedAt: Instant,
+    val updatedAt: Instant? = null,
 )
