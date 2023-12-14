@@ -20,5 +20,4 @@ class AsyncOperationRepositoryTest(
 
     findById.get().id shouldBe "foo"
   }
-
 }

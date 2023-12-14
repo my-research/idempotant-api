@@ -11,10 +11,10 @@ class CompositeStatusHandler(
     private val handlers: List<CheckStatusHandler>
 ): CheckStatusHandler {
 
-    override fun handle(asyncOperation: AsyncOperation): AsyncOperationCheck {
-        val firstHandler = handlers.firstOrNull()
-        return firstHandler?.handle(asyncOperation)
-            ?: throw IllegalStateException("$asyncOperation 상태에 맞는 handler 가 없음")
+    override fun handle(op: AsyncOperation): AsyncOperationCheck {
+        val handler = handlers.firstOrNull { it.support(op) }
+        return handler?.handle(op)
+            ?: throw IllegalStateException("$op 상태에 맞는 handler 가 없음")
     }
 
     override fun support(asyncOperation: AsyncOperation): Boolean {

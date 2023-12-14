@@ -20,6 +20,7 @@ data class AsyncOperation(
 ) {
   fun complete() {
     // TODO resource Location 을 어떻게 정의해야할까
+    resourceLocation = id
     status = AsyncOperationStatus.COMPLETED
     updatedAt = Instant.now()
   }
