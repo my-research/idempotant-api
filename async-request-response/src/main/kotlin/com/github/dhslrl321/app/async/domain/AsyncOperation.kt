@@ -19,7 +19,14 @@ data class AsyncOperation(
   var updatedAt: Instant? = null,
 ) {
   fun complete() {
+    // TODO resource Location 을 어떻게 정의해야할까
     status = AsyncOperationStatus.COMPLETED
+    updatedAt = Instant.now()
+  }
+
+  fun fail(reason: String) {
+    failureReason = reason
+    status = AsyncOperationStatus.FAILED
     updatedAt = Instant.now()
   }
 }
