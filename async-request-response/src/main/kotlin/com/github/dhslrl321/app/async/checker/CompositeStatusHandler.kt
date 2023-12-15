@@ -9,7 +9,7 @@ import java.lang.UnsupportedOperationException
 @Component
 class CompositeStatusHandler(
     private val handlers: List<CheckStatusHandler>
-): CheckStatusHandler {
+) : CheckStatusHandler {
 
     override fun handle(op: AsyncOperation): AsyncOperationCheck {
         val handler = handlers.firstOrNull { it.support(op) }

@@ -6,16 +6,16 @@ import org.springframework.stereotype.Component
 
 @Component
 class FailedStatusHandler : CheckStatusHandler {
-  override fun handle(asyncOperation: AsyncOperation): AsyncOperationCheck {
-    return AsyncOperationCheck(
-      id = asyncOperation.id,
-      status = asyncOperation.status.name,
-      failureReason = asyncOperation.failureReason,
-      createdAt = asyncOperation.createdAt,
-      updatedAt = asyncOperation.updatedAt,
-    )
-  }
+    override fun handle(asyncOperation: AsyncOperation): AsyncOperationCheck {
+        return AsyncOperationCheck(
+            id = asyncOperation.id,
+            status = asyncOperation.status.name,
+            failureReason = asyncOperation.failureReason,
+            createdAt = asyncOperation.createdAt,
+            updatedAt = asyncOperation.updatedAt,
+        )
+    }
 
-  override fun support(asyncOperation: AsyncOperation): Boolean =
-    asyncOperation.status == AsyncOperationStatus.FAILED
+    override fun support(asyncOperation: AsyncOperation): Boolean =
+        asyncOperation.status == AsyncOperationStatus.FAILED
 }
