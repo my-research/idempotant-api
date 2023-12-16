@@ -5,7 +5,7 @@ import jakarta.persistence.EnumType
 import jakarta.persistence.Enumerated
 import jakarta.persistence.Id
 import java.time.Instant
-import java.util.UUID
+import java.util.*
 
 @Entity
 data class AsyncOperation(

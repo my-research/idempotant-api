@@ -1,14 +1,16 @@
 package com.github.dhslrl321.app.async.transistor
 
 import com.github.dhslrl321.app.async.domain.AsyncOperationRepository
-import com.github.dhslrl321.app.async.domain.AsyncOperationStatus
 import org.springframework.stereotype.Component
+import org.springframework.transaction.annotation.Propagation
+import org.springframework.transaction.annotation.Transactional
 
 @Component
+@Transactional(propagation = Propagation.REQUIRES_NEW)
 class AsyncOperationTransistor(
     private val repository: AsyncOperationRepository
 ) {
-    // TODO transaction 고려해야함
+
     fun transitToComplete(id: String) {
         val operation = repository.findById(id).orElseThrow()
         operation.complete()

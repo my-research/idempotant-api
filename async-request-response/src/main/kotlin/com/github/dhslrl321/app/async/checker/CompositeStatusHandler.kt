@@ -3,7 +3,6 @@ package com.github.dhslrl321.app.async.checker
 import com.github.dhslrl321.app.async.domain.AsyncOperation
 import org.springframework.context.annotation.Primary
 import org.springframework.stereotype.Component
-import java.lang.UnsupportedOperationException
 
 @Primary
 @Component

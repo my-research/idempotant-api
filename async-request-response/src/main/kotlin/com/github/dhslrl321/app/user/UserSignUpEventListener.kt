@@ -4,7 +4,6 @@ import com.github.dhslrl321.app.async.transistor.AsyncOperationTransistor
 import org.springframework.context.event.EventListener
 import org.springframework.scheduling.annotation.Async
 import org.springframework.stereotype.Component
-import java.lang.RuntimeException
 import kotlin.random.Random
 
 private const val SECONDS_10 = 10000L

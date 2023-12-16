@@ -1,9 +1,7 @@
 package com.github.dhslrl321.app.async.checker
 
 import com.github.dhslrl321.app.async.domain.AsyncOperationRepository
-import com.github.dhslrl321.app.async.domain.AsyncOperationStatus
 import org.springframework.stereotype.Component
-import java.lang.IllegalStateException
 import java.time.Instant
 
 @Component

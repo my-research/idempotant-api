@@ -2,7 +2,7 @@ package com.github.dhslrl321.app.user
 
 import org.springframework.context.ApplicationEventPublisher
 import org.springframework.stereotype.Service
-import java.util.UUID
+import java.util.*
 
 @Service
 class CreateUserService(
